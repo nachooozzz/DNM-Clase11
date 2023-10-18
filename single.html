@@ -72,12 +72,12 @@
                 });
                 //Necesito una condición para pasar a trabajo anterior o siguiente si lo hubiera
                 if (n < 1) {
-                    document.querySelector("#next").innerHTML += `<a href="single.html?nro="${n + 1}" class="btn btn-sm btn-outline-secondary">siguiente &rarr;</a>`;
+                    document.querySelector("#next").innerHTML += `<a href="single.html?nro='"${n + 1}" class="btn btn-sm btn-outline-secondary">siguiente &rarr;</a>`;
                 } else if (n > 0 && n < cuantos - 1) {
-                    document.querySelector("#back").innerHTML = `<a href="single.html?nro="${n - 1}" class="btn btn-sm btn-outline-secondary">&larr; anterior</a>`;
-                    document.querySelector("#next").innerHTML = `<a href="single.html?nro="${n + 1}" class="btn btn-sm btn-outline-secondary">siguiente &rarr;</a>`;
+                    document.querySelector("#back").innerHTML = `<a href="single.html?nro='"${n - 1}" class="btn btn-sm btn-outline-secondary">&larr; anterior</a>`;
+                    document.querySelector("#next").innerHTML = `<a href="single.html?nro='"${n + 1}" class="btn btn-sm btn-outline-secondary">siguiente &rarr;</a>`;
                 } else {
-                    document.querySelector("#back").innerHTML = `<a href="single.html?nro="${n - 1}" class="btn btn-sm btn-outline-secondary">&larr; anterior</a>`;
+                    document.querySelector("#back").innerHTML = `<a href="single.html?nro='"${n - 1}" class="btn btn-sm btn-outline-secondary">&larr; anterior</a>`;
                 }
             } //ahora cierro la creación de la función asincrónica
             portfolio().catch((error) => console.error(error));
